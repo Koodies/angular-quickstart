@@ -1,0 +1,14 @@
+<button type="button" (click)="goBack()">go back</button>
+<div *ngIf="hero">
+  <h2>{{ hero.name | uppercase }} Details</h2>
+  <div>id: {{ hero.id }}</div>
+  <div>
+    <label for="name">Hero Name: </label>
+    <input
+      id="name"
+      [(ngModel)]="hero.name"
+      placeholder="name"
+      (change)="onChange(hero)"
+    />
+  </div>
+</div>
